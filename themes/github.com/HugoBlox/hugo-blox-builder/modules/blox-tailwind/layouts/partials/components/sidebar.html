@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">{{- $context := .context -}}</span></p>
+<p class="p1"><span class="s1">{{- $no_sidebar := .no_sidebar | default true -}}</span></p>
+<p class="p1"><span class="s1">{{- $pad_sidebar := true -}}</span></p>
+<p class="p1"><span class="s1">{{- $sidebar_dynamic_class := cond $no_sidebar (cond $pad_sidebar "lg:hidden xl:block" "lg:hidden") "lg:sticky" -}}</span></p>
+<p class="p1"><span class="s1">{{- $root_section := cond (eq site.Home.Type "docs") site.Home $context.FirstSection -}}</span></p>
+<p class="p1"><span class="s1">{{- $page_url := $context.RelPermalink -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{ if not $no_sidebar }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{/* Classes appended to `hb-sidebar-mobile-menu` are modified via sidebar JS, so do not @apply them to `hb-sidebar-mobile-menu` */}}</span></p>
+<p class="p1"><span class="s1">{{ end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{ template "menu-links" (dict "context" site.Home "pageURL" $page_url "page" $context "toc" true) -}}</span></p>
+<p class="p1"><span class="s1">{{ template "custom-menu-links" }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{ if $no_sidebar }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Add any additional content here for no sidebar --&gt;</span></p>
+<p class="p1"><span class="s1">{{ else }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ template "menu-links" (dict "context" $root_section "page" $context "pageURL" $page_url) }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ template "custom-menu-links" }}</span></p>
+<p class="p1"><span class="s1">{{ end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- define "menu-links" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ template "link-tree" (dict "context" .context "level" 0 "page" .page "pageURL" .pageURL "toc" (.toc | default false)) }}</span></p>
+<p class="p1"><span class="s1">{{- end -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- define "link-tree" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ if ge .level 4 }}{{ return }}{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $context := .context -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $page := .page -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $page_url := .page.RelPermalink -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $level := .level -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $toc := .toc | default false -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ with $items := union .context.RegularPages .context.Sections -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{- $items = where $items "Params.sidebar.hidden" "!=" true -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{- if eq $level 0 -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ range $items.ByWeight }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- $active := eq $page_url .RelPermalink -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- template "custom-menu-link" dict "context" . "active" $active "title" .LinkTitle "link" .RelPermalink -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- if and $toc $active -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{{- template "mobile-toc" dict "page" . -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- template "link-tree" dict "context" . "page" $page "pageURL" $page_url "level" (add $level 1) "toc" $toc -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ else }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ range $items.ByWeight }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- $active := eq $page_url .RelPermalink -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- $title := .LinkTitle | default .File.BaseFileName -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- template "custom-menu-link" dict "context" . "active" $active "title" $title "link" .RelPermalink -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- if and $toc $active -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{{- template "mobile-toc" dict "page" . -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{- template "link-tree" dict "context" . "page" $page "pageURL" $page_url "level" (add $level 1) "toc" $toc -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ end }}</span></p>
+<p class="p1"><span class="s1">{{- end -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- define "mobile-toc" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ $page := .page }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ if and $page $page.Fragments $page.Fragments.Headings }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul class="hb-sidebar-mobile-toc"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{- range $page.Fragments.Headings }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;li&gt;{{ .Title }}&lt;/li&gt; &lt;!-- 修改为 .Title 以避免 .Text 问题 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{- end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ else }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;No headings found.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ end }}</span></p>
+<p class="p1"><span class="s1">{{- end -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- define "custom-menu-links" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- range site.Menus.sidebar -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{- $name := .Name -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ if eq .Params.type "separator" }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ $name }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ else }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ template "custom-menu-link" dict "active" false "title" $name "link" (.URL | relLangURL) }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1">{{- end -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- define "custom-menu-link" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $is_external := strings.HasPrefix .link "http" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- $open := .open | default false -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;a href="{{ .link }}" {{ if $is_external }}target="_blank" rel="noopener"{{ end }}&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ .title }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{- with .context }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ if or .RegularPages .Sections }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Additional context-related logic can go here --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ end }}</span></p>
+<p class="p1"><span class="s1">{{- end -}}</span></p>
+</body>
+</html>
