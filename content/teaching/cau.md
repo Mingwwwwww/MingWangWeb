@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 30
 
-title: 'China Agricultural University'
+title: '<span style="font-size: 0.6em; white-space: nowrap;">China Agricultural University</span>'
 subtitle: ''
 
 content:
@@ -38,11 +38,11 @@ design:
   columns: '2'
 ---
 
-### Graduate Teaching Assistant
 
-| **Course** | **Date** |
-| ---------- | -------- |
-| **Applied statistics** | Aug 2017 — Jan 2018 |
+## **Graduate Teaching Assistant**
+
+- <span class="course-name">Applied Statistics</span>  
+  *Graduate, Fall 2017*
 
 <!-- {{% callout note %}}
 Quickly discover relevant content by [filtering publications](./publication/).

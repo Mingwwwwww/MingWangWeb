@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 20
 
-title: 'Colorado State University'
+title: '<span style="font-size: 0.6em; white-space: nowrap;">Colorado State University</span>'
 subtitle: ''
 
 content:
@@ -38,19 +38,55 @@ design:
   columns: '2'
 ---
 
-### Instructor
+<style>
+/* Style for headings */
+h2 {
+  color: #333; /* Dark gray for headers */
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
 
-| **Course** | **Details** | **Date** |
-| ---------- | ----------- | -------- |
-| **Code Camp** | An introductory class on R programming for incoming graduate students. | Aug 2024         |
-| **AREC 230, Agricultural Data Management and Analysis** | Designed and developed a new course, including curriculum and all materials. Delivered lectures, conducted labs, assessed performance, and provided individualized support. | Aug 2022 — May 2023 |
-| **AREC 202, Agricultural and Resource Economics** | Delivered lectures, conducted labs, and provided support. | Aug 2020 — Dec 2020 |
+/* Style for course names */
+.course-name {
+  color: #000; /* Black for course names */
+  font-size: 1.1em; /* Slightly larger for emphasis */
+  font-weight: bold;
+}
 
-### Graduate Teaching Assistant
+/* Style for descriptions */
+.description {
+  color: #666; /* Light gray for descriptions */
+  line-height: 1.6; /* Improved line spacing */
+  font-size: 0.9em; /* Slightly smaller font size for contrast */
+  margin: 0.2em 0; /* Spacing between bullets */
+}
 
-| **Course** | **Date** |
-| ---------- | -------- |
-| **AREC 202, Agricultural and Resource Economics** | Aug 2020 — Dec 2020         |
-| **AREC 415, International Agricultural Trade** | Jan 2020 — May 2020         |
-| **AREC 202, Agricultural and Resource Economics** | Jan 2020 — May 2020         |
-| **AREC 202, Agricultural and Resource Economics** | Aug 2019 — Dec 2019         |
+/* Style for dates */
+.date {
+  color: #333; /* Darker gray for dates to stand out but not as bold as titles */
+  font-size: 0.9em; /* Smaller than course names but readable */
+  margin-left: 1.5em; /* Indentation to align nicely under the course title */
+  font-style: italic; /* Italic style for dates */
+}
+</style>
+
+## **Instructor**
+
+- <span class="course-name">Code Camp</span>  
+  *Graduate, Summer 2024*  
+  - <span class="description">An introductory class on R programming for incoming graduate students</span>  
+  - <span class="description">Self-created course website: [Code Camp Website](https://wming4.wixsite.com/code-camp)</span>
+
+- <span class="course-name">AREC 230, Agricultural Data Management and Analysis</span>  
+  *Graduate, Fall 2022 and Spring 2023*  
+  - <span class="description">Designed and developed a new course, including curriculum and all materials.</span>  
+  - <span class="description">Delivered lectures, conducted labs, assessed performance, and provided individualized support.</span>
+
+- <span class="course-name">AREC 202, Agricultural and Resource Economics</span>  
+  *Graduate, Fall 2020*  
+  - <span class="description">Delivered lectures, conducted labs, and provided support.</span>
+
+## **Graduate Teaching Assistant**
+
+- <span class="course-name">AREC 202, Agricultural and Resource Economics</span>  
+  *Graduate, Fall 2019, Spring 2020 and Fall 2020*

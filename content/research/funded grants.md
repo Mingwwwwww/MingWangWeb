@@ -7,14 +7,14 @@ widget: pages
 headless: true
 
 # Order that this section appears on the page.
-weight: 30
+weight: 40
 
-title: '<span style="white-space: nowrap;">Works in Progress</span>'
+title: '<span style="white-space: nowrap;">Funded Grants</span>'
 subtitle: ''
 
 content:
   # Page type to display. E.g. post, talk, publication...
-  page_type: publication
+  page_type: courses-dku
   # Choose how much pages you would like to display (0 = all pages)
   count: 0
   # Choose how many pages you would like to offset by
@@ -25,7 +25,7 @@ content:
   filters:
     tag: ''
     category: ''
-    publication_type: '4'
+    publication_type: ''
     author: ''
     exclude_featured: true
 design:
@@ -34,9 +34,12 @@ design:
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view: 1
+  view: 2
+  columns: '2'
 ---
 
-<!-- {{% callout note %}}
-Quickly discover relevant content by [filtering publications](./publication/).
-{{% /callout %}} -->
+
+
+
+IATRC Commissioned Paper: $35,000, Co-PI  
+- **Global Economic Effects of Trade Restrictions on Japanese Seafood following Nuclear Wastewater Discharge**
