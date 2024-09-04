@@ -5,6 +5,6 @@ export default defineStackbitConfig({
     nodeVersion: "18",
     ssgName: "hugo",
     contentSources: [],
-    postInstallCommand: "npm i --no-save @stackbit/types && npm install -g hugo-cli && hugo-cli --version",  // 添加检查 hugo-cli 安装的命令
-    devCommand: "npx hugo-cli server -D"
+    postInstallCommand: "npm i --no-save @stackbit/types && npm install -g hugo-cli",
+    devCommand: "npx hugo-cli server -D"  // 使用 npx 运行 hugo-cli
 });
