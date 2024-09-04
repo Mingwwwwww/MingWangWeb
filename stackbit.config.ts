@@ -5,6 +5,6 @@ export default defineStackbitConfig({
     nodeVersion: "18",
     ssgName: "hugo",
     contentSources: [],
-    postInstallCommand: "npm i --no-save @stackbit/types",
-    devCommand: "hugo serve -D"  // 添加这一行来指定开发服务器命令
+    postInstallCommand: "npm i --no-save @stackbit/types && npm install -g hugo-cli",
+    devCommand: "npx hugo serve -D"  // 使用 npx 运行 hugo 命令
 });
