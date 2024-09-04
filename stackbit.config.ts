@@ -5,6 +5,6 @@ export default defineStackbitConfig({
     nodeVersion: "18",
     ssgName: "hugo",
     contentSources: [],
-    postInstallCommand: "npm i --no-save @stackbit/types && npm install -g hugo-cli",
-    devCommand: "npx hugo serve -D"  // 使用 npx 运行 hugo 命令
+    postInstallCommand: "npm i --no-save @stackbit/types && npm install -g hugo-cli@latest",
+    devCommand: "npx hugo@0.91.2 serve -D"  // 强制使用指定版本的 Hugo
 });
