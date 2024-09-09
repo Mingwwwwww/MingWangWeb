@@ -34,7 +34,7 @@ links:
 url_pdf: ''
 url_code: ''
 url_dataset: ''
-url_poster: 'https://www.dropbox.com/scl/fi/hrmnamqvx4f1iair0wekt/AAEA-poster-7.27.pdf?rlkey=8wnohib11650oc1fft2fhndhe&st=xi2hjrod&dl=0'
+url_poster: 'https://www.dropbox.com/scl/fi/tqe5cj2qm4580jut1zc0x/Efficient-Regulation-of-Cross-pollination-in-Hemp.pdf?rlkey=kss7i76sqb86hm2yvycuogr5p&st=h0paynkb&dl=0'
 url_project: ''
 url_slides: ''
 url_source: ''
