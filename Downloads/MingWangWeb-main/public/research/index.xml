@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research | CSU</title>
+    <link>http://localhost:3849/research/</link>
+      <atom:link href="http://localhost:3849/research/index.xml" rel="self" type="application/rss+xml" />
+    <description>Research</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 17 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:3849/media/icon_hu9266607292054411573.png</url>
+      <title>Research</title>
+      <link>http://localhost:3849/research/</link>
+    </image>
+    
+    <item>
+      <title>Producers marketing a novel crop: a field-level view of hemp market channels</title>
+      <link>http://localhost:3849/research/hemp-market/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3849/research/hemp-market/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>China’s Vegetables Export Trade to ASEAN：An Empirical Study Based on Gravity Model</title>
+      <link>http://localhost:3849/research/vegetables-trade/</link>
+      <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3849/research/vegetables-trade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research on Farmers’ Behavior from the Perspective of Industrial Integration - Empirical evidence from 668 vegetable growers</title>
+      <link>http://localhost:3849/research/industrial-integration/</link>
+      <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3849/research/industrial-integration/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
