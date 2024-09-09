@@ -26,7 +26,7 @@ awards:
   title: Object-Oriented Programming in R
   url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
 education:
-- area: PhD Econometrics and Quantitative Economics
+- area: PhD Agricultural and Resource Economics
   date_end: "2025-06-01"
   date_start: "2019-09-01"
   institution: Colorado State University
@@ -144,5 +144,5 @@ work:
 
 ## About Me
 
-I am a Ph.D. candidate in Econometrics and Quantitative Economics at Colorado State University. My research centers on the intersection of environmental conservation and agricultural policy, with a focus on quantifying the economic impacts of conservation incentives. Through my work, I aim to provide empirical insights that inform policy decisions, balancing rural economic development with environmental stewardship and contributing to the development of sustainable agricultural practices.
+I am a Ph.D. candidate in Agricultural and Resource Economics at Colorado State University. My research centers on the intersection of environmental conservation and agricultural policy, with a focus on quantifying the economic impacts of conservation incentives. Through my work, I aim to provide empirical insights that inform policy decisions, balancing rural economic development with environmental stewardship and contributing to the development of sustainable agricultural practices.
 
