@@ -9,7 +9,7 @@ sections:
   content:
     button:
       text: Download CV
-      url: https://www.dropbox.com/scl/fi/t37r62fweay54mxsdtida/Ming_CV_9524.pdf?rlkey=3ikj9v4gklc6na4fjp4og0w0e&st=01gsr5pw&dl=0
+      url: https://www.dropbox.com/scl/fi/7bpe34mjxuk4xnbay3ihc/Ming_CV_9924.pdf?rlkey=bxt7ub3m9mnw5b9sr99kc9sen&st=iigj6m9p&dl=0
     text: ""
     username: admin
   design:
