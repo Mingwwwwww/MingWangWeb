@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vegetable Export Trade | CSU</title>
+    <link>http://localhost:3849/tags/vegetable-export-trade/</link>
+      <atom:link href="http://localhost:3849/tags/vegetable-export-trade/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vegetable Export Trade</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 17 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:3849/media/icon_hu9266607292054411573.png</url>
+      <title>Vegetable Export Trade</title>
+      <link>http://localhost:3849/tags/vegetable-export-trade/</link>
+    </image>
+    
+    <item>
+      <title>China’s Vegetables Export Trade to ASEAN：An Empirical Study Based on Gravity Model</title>
+      <link>http://localhost:3849/publication/vegetables-trade/</link>
+      <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3849/publication/vegetables-trade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>China’s Vegetables Export Trade to ASEAN：An Empirical Study Based on Gravity Model</title>
+      <link>http://localhost:3849/research/vegetables-trade/</link>
+      <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3849/research/vegetables-trade/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
