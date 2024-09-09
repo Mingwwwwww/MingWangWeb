@@ -16,7 +16,7 @@ abstract: In agriculture, conservation subsidies have been an important componen
 
 featured: true
 
-url_poster: 'https://www.dropbox.com/scl/fi/5jyvl00gl6yzwgynnlo92/AAEA2024poster_Ming_final.pdf?rlkey=i8vsu766b1ygoeq8xxgiyhi6n&st=odulcvu1&dl=0'
+url_poster: 'https://www.dropbox.com/scl/fi/3sfpgr64hxujie8cio11o/Working-Lands-Conservation-and-Rural-Employment-Lessons-from-The-Environmental-Quality-Incentives-Program.pdf?rlkey=z92yc5x3q13arh8osqlyciz99&st=ecnxrwp4&dl=0'
 
 image:
   focal_point: ''
