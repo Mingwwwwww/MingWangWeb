@@ -9,7 +9,7 @@ summary: My CV
 
 <script type="text/javascript">
   document.addEventListener("adobe_dc_view_sdk.ready", function() { 
-    var adobeDCView = new AdobeDC.View({clientId: "a966ad52c1304b5f80f2f800c2dbc9f8", divId: "adobe-dc-view", locale: "es-ES"});
+    var adobeDCView = new AdobeDC.View({clientId: "84641ad9f74a4865add79fb3f3b46bc5", divId: "adobe-dc-view", locale: "es-ES"});
 
     adobeDCView.previewFile({
       content: {location: {url: "/uploads/resume.pdf"}},
