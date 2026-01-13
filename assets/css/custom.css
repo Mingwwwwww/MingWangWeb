@@ -1,0 +1,81 @@
+.description {
+    max-width: 100%;
+    white-space: nowrap;  /* 防止文本自动换行 */
+    overflow: hidden;     /* 防止文本超出边界 */
+    text-overflow: ellipsis;  /* 超出部分显示省略号 */
+    
+}
+ul {
+    width: 180%;  /* 确保容器宽度足够 */
+    padding-right: 100px;  /* 增加右侧内边距，防止文字被遮挡 */
+}
+
+/* 只针对 Education 部分进行左移 */
+div.section-subheading + ul {
+    margin-left: -40px;  /* 向左移动20px，调整数值以适合你的需求 */
+}
+
+
+
+.bio-text {
+  
+    max-width: 100%; /* 确保宽度占据容器的全部 */
+    white-space: normal; /* 允许文本换行 */
+    overflow: visible; /* 显示超出部分的内容 */
+    padding-right: 20px; /* 添加适当的内边距以防止文本贴近边缘 */
+    line-height: 1.6; /* 增加行间距以提高可读性 */
+}
+
+.prose.prose-slate {
+    font-size: 16px;  /* 调整字体大小，可以根据需要设置不同的值 */
+    max-width: 150%;  /* 让段落宽度占据页面的全宽 */
+    width: 100%;  /* 设置实际宽度，可以根据需要增加或减少 */
+    margin: 0 auto;  /* 居中对齐 */
+    line-height: 1.6;  /* 增加行间距，提升可读性 */
+}
+
+
+.mt-16 {
+    margin-top: 8px !important; /* 将上边距调整为较小的值 */
+}
+
+.sm\:mt-20 {
+    margin-top: 8px !important; /* 针对小屏幕的上边距也进行调整 */
+}
+
+.container {
+    padding-bottom: 0px !important; /* 减少底部的填充空间 */
+}
+
+
+.avatar-emoji {
+  display: none;
+}
+
+#section-markdown {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+#research {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#working_papers {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+#featured-posters {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+
+

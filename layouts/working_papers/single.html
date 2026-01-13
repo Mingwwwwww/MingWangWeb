@@ -1,0 +1,40 @@
+{{/* Redirect working_papers page to external_link (preferred) or url_pdf */}}
+
+{{ $target := "" }}
+
+{{ with .Params.external_link }}
+  {{ $target = . }}
+{{ end }}
+
+{{ if and (eq $target "") (.Params.url_pdf) }}
+  {{ $target = .Params.url_pdf }}
+{{ end }}
+
+{{ if $target }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ $target }}">
+    <link rel="canonical" href="{{ $target }}">
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    <p>Redirecting… <a href="{{ $target }}">Open link</a></p>
+  </body>
+</html>
+{{ else }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    <article>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+  </body>
+</html>
+{{ end }}

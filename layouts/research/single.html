@@ -1,0 +1,35 @@
+{{/* Redirect publication page to url_pdf if provided */}}
+
+{{ $pdf := .Params.external_link }}
+
+{{ if $pdf }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ $pdf }}">
+    <link rel="canonical" href="{{ $pdf }}">
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    <p>
+      Redirecting to PDF…
+      <a href="{{ $pdf }}">Click here if you are not redirected.</a>
+    </p>
+  </body>
+</html>
+{{ else }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    <article>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+  </body>
+</html>
+{{ end }}
